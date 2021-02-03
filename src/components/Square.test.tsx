@@ -46,7 +46,7 @@ describe('Square', () => {
 		renderWithColor(true);
 
 		const style = getRegionStyle();
-		
+
 		expect(style.color).toBe('white');
 	});
 

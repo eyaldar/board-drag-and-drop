@@ -1,13 +1,13 @@
-import React, {Fragment} from 'react';
-import Knight from './components/Knight';
-import Square from './components/Square';
+import React from 'react';
+import Board from './components/Board';
+import {Provider} from 'react-redux';
+import store from './stores/store';
 
-const App = (): JSX.Element =>
-	<Fragment>
-		<Square black={true}>
-			<Knight />
-		</Square>,
-	</Fragment>;
+const App = (): JSX.Element => (
+	<Provider store={store}>
+		<Board/>
+	</Provider>
+);
 
 
 export default App;
