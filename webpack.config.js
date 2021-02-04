@@ -29,10 +29,12 @@ module.exports = (env)  => {
             rules: [
                 {
                     test: /\.js$/,
+                    exclude: /node_modules/,
                     use: ["source-map-loader"],
                 },
                 {
                     test: /\.(tsx|ts)$/,
+                    exclude: /node_modules/,
                     use: [
                         {
                             loader: 'thread-loader',
